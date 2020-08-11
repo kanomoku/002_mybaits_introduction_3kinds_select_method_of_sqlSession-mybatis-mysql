@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace:理解成实现类的全路径(包名加类名) -->
+<mapper namespace="a.b">
+	<!-- id:方法名 -->
+	<select id="selAll" resultType="com.pojo.Flower">
+		select * from flower
+	</select>
+
+	<select id="selById" resultType="com.pojo.Flower">
+		select * from flower where id=1
+	</select>
+
+	<select id="selCountById" resultType="int">
+		select count(*) from flower
+	</select>
+
+	<select id="c" resultType="com.pojo.Flower">
+		select * from flower
+	</select>
+</mapper>
